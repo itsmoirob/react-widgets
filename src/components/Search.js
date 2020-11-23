@@ -1,3 +1,5 @@
+import './Search.css';
+
 import React, { useState, useEffect } from 'react';
 import axios from 'redaxios';
 
@@ -26,12 +28,15 @@ const Search = () => {
   const renderedResults = result.map(({ pageid, title, snippet }) => {
     return (
       <div className="item" key={pageid}>
+        <div className="right floated content">
+          <a href={`https://en.wikipedia.org?curid=${pageid}`} className="ui button">Go</a>
+        </div>
         <div className="content">
           <div className="header">
             {title}
           </div>
 
-          {snippet}
+          <span dangerouslySetInnerHTML={{ __html: snippet }} ></span>
         </div>
       </div>
     )
