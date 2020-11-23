@@ -9,10 +9,12 @@ import Search from './components/Search';
 //   { title: 'How do you use React?', content: 'You use React by creating componenets' },
 // ];
 
-export default () => {
+const App = () => {
   return (
     <div>
       <Search />
     </div>
   )
 }
+
+export default App;
