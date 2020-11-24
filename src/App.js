@@ -11,8 +11,8 @@ import Dropdown from './components/Dropdown';
 // ];
 
 const options = [
-  { label: 'The color red', value: 'red' },
-  { label: 'The color green', value: 'green' },
+  { label: 'The colour red', value: 'red' },
+  { label: 'The colour green', value: 'green' },
   { label: 'A shade of blue', value: 'blue' },
 ]
 
