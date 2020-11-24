@@ -5,7 +5,7 @@ import axios from 'redaxios';
 
 const Search = () => {
   const [term, setTerm] = useState('');
-  const [result, setResult] = useState([]);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
     const search = async () => {
@@ -21,20 +21,19 @@ const Search = () => {
         }
       });
 
-      setResult(data.query.search);
+      setResults(data.query.search);
     }
 
     const timeoutId = setTimeout(() => {
       search();
     }, 500);
 
-
     return () => {
       clearTimeout(timeoutId);
     }
   }, [term]);
 
-  const renderedResults = result.map(({ pageid, title, snippet }) => {
+  const renderedResults = results.map(({ pageid, title, snippet }) => {
     return (
       <div className="item" key={pageid}>
         <div className="right floated content">
