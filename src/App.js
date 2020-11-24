@@ -10,10 +10,16 @@ import Dropdown from './components/Dropdown';
 //   { title: 'How do you use React?', content: 'You use React by creating componenets' },
 // ];
 
+const options = [
+  {label: 'The color red', value: 'red'},
+  {label: 'The color green', value: 'green'},
+  {label: 'A shade of blue', value: 'blue'},
+]
+
 const App = () => {
   return (
     <div>
-      <Dropdown />
+      <Dropdown options={options} />
     </div>
   )
 }
