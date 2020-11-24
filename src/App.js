@@ -1,7 +1,8 @@
 import React from 'react';
 
 // import Accordian from './components/Accordian';
-import Search from './components/Search';
+// import Search from './components/Search';
+import Dropdown from './components/Dropdown';
 
 // const items = [
 //   { title: 'What is React?', content: 'React is a front end javascript framework' },
@@ -12,7 +13,7 @@ import Search from './components/Search';
 const App = () => {
   return (
     <div>
-      <Search />
+      <Dropdown />
     </div>
   )
 }
